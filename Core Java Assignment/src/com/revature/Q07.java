@@ -13,14 +13,16 @@ public class Q07 {
 		
 		public int compare(Employee employee, Employee otherEmployee) {
 			if (employee.name == otherEmployee.name) {
-				// Sort on other attributes
+				// If their names are the same, sort on other attributes
 				if (employee.department == otherEmployee.department) {
-					// Sort by age
+					// Their department is the same, too, so sort by age
 					return employee.age.compareTo(otherEmployee.age);
 				} else {
+					// Same name, but different department
 					return employee.department.compareTo(otherEmployee.department);
 				}
 			} else {
+				// Different name
 				return employee.name.compareTo(otherEmployee.name);
 			}
 		}
