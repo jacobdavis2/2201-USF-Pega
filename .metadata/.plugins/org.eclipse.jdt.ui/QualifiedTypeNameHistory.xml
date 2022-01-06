@@ -4,4 +4,10 @@
     <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
     <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="com.revature.animals.NaturalFunctions"/>
+    <fullyQualifiedTypeName name="com.revature.animals.Deer"/>
+    <fullyQualifiedTypeName name="com.revature.animals.MultiCellLifeform"/>
+    <fullyQualifiedTypeName name="com.revature.animals.Bear"/>
+    <fullyQualifiedTypeName name="com.revature.animals.Animal"/>
 </qualifiedTypeNameHistroy>
