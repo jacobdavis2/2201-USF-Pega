@@ -30,7 +30,7 @@ public class Driver {
 			// ResultSets have a built-in iterator that starts one row ABOVE the first row
 			// This allows us to call while on its next() method, which moves it to the next row
 			while (result.next()) {
-				// While the internal iterator is stationed at a row, we can access the data of the row
+				// While the internal iterator is stationed at a row, we can access the data of that row
 				// using result.get<type>("column name")
 				System.out.println("Id: " + result.getInt("apartment_id") + ", price: " 
 						+ result.getDouble("price"));
