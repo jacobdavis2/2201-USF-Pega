@@ -17,6 +17,8 @@ public class Driver {
 				menu.mainMenu(scanner);
 			}
 		} finally {
+			// When the program is stopped, this will trigger and close the connection
+			// You have to use the stop button in your IDE. Similar to finalize in ConnectionManager
 			try {
 				ConnectionManager.getConnection().close();
 			} catch (SQLException e) {
