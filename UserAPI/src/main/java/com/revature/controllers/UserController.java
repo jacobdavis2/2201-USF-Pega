@@ -29,10 +29,10 @@ public class UserController {
 	public Handler createNewUser = ctx -> {
 		// This line deserializes a JSON object from the body and creates a Java object out of it
 		User u = ctx.bodyAsClass(User.class);
-		userDao.createUser(u);
 		
-		// Status code 201 means "accepted"
-		ctx.status(201);
+		if (userDao.createUser(u))
+			ctx.status(201); // Status code 201 means "created"
+		else ctx.status(400);
 	};
 	
 	// Retreive a User based on their username
