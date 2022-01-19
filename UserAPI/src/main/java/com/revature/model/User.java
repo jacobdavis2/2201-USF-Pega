@@ -12,4 +12,7 @@ public class User {
 		this.lastName = lastName;
 		this.birthMonth = birthMonth;
 	}
+	
+	// To use Jackson, our models must have a no-params constructor
+	public User() {}
 }

@@ -9,8 +9,12 @@ import com.revature.model.User;
 
 public class UserDao {
 
+	// A local reference to the same Connection as ConnectionManager.getConnection();
+	// Caching local copies of references is an alternative to the Singleton design pattern
 	private Connection conn;
 	
+	// When caching local copies, the reference must be given at some point; in this case,
+	//  as a constructor parameter.
 	public UserDao(Connection conn) {
 		this.conn = conn;
 	}
@@ -46,11 +50,45 @@ public class UserDao {
 		try {
 			statement = conn.createStatement();
 			return statement.execute("INSERT INTO users VALUES ("
-					+ "\'" + user.username + "\'"
-					+ "\'" + user.password + "\'"
-					+ "\'" + user.firstName + "\'"
-					+ "\'" + user.lastName + "\'"
+					+ "\'" + user.username + "\',"
+					+ "\'" + user.password + "\',"
+					+ "\'" + user.firstName + "\',"
+					+ "\'" + user.lastName + "\',"
 					+ "\'" + user.birthMonth + "\');");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return false;
+	}
+	
+	public boolean updateUser(User user) {
+		
+		Statement statement;
+		try {
+			statement = conn.createStatement();
+			return statement.execute("UPDATE users SET "
+					+ "password = \'" + user.password + "\',"
+					+ "first_name = \'" + user.firstName + "\',"
+					+ "last_name = \'" + user.lastName + "\',"
+					+ "birth_month\'" + user.birthMonth + "\'"
+					+ "WHERE username = \'" + user.username + "\';");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return false;
+	}
+	
+	public boolean deleteUser(User user) {
+		
+		Statement statement;
+		try {
+			statement = conn.createStatement();
+			return statement.execute("DELETE FROM users WHERE username = \'" 
+					+ user.username + "\'");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
