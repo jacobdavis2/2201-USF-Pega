@@ -19,10 +19,13 @@
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.Statement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-    <fullyQualifiedTypeName name="io.javalin.Javalin"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="com.revature.dao.UserDao"/>
-    <fullyQualifiedTypeName name="io.javalin.http.Handler"/>
     <fullyQualifiedTypeName name="com.revature.model.User"/>
     <fullyQualifiedTypeName name="com.revature.controllers.UserController"/>
+    <fullyQualifiedTypeName name="io.javalin.Javalin"/>
+    <fullyQualifiedTypeName name="io.javalin.http.staticfiles.Location"/>
+    <fullyQualifiedTypeName name="io.javalin.http.Handler"/>
+    <fullyQualifiedTypeName name="com.revature.user.User"/>
+    <fullyQualifiedTypeName name="com.revature.user.UserDao"/>
 </qualifiedTypeNameHistroy>

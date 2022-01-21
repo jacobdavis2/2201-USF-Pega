@@ -11,11 +11,10 @@ public class Driver {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		Javalin app = Javalin.create(
-				config -> {
-					config.addStaticFiles("/html", Location.CLASSPATH);
-				}).start(7070);
+
+		Javalin app = Javalin.create( config -> {
+			config.addStaticFiles("/html", Location.CLASSPATH);
+		}).start(7070);
 		
 		app.post("/users/form", postUser);
 	}
@@ -33,6 +32,6 @@ public class Driver {
 		UserDao dao = new UserDao(ConnectionManager.getConnection());
 		dao.createUser(u);
 		
-		//ctx.redirect("localhost:7070/html/index.html");
+		ctx.redirect("/index.html");
 	};
 }
