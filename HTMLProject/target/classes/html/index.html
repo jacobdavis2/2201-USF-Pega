@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>This is a big heading.</h1> <!-- These are headings. There are six sizes, 1 - 6, with 1 being largest.-->
+        <h3>This is a moderate heading.</h3>
+        <h6>This is a small heading.</h6>
+
+        <p>This is paragraph tag.</p> <!-- This is a paragraph. It is a block element, so other elements go below it/-->
+        <br> <!-- This is a break; it gives whitespace --> 
+        <p>This paragraph <span>will</span> under the previous.</p>
+        
+        <span>This is some text.</span> <!-- Span is like <p> but no newline -->
+        <span> This is more text.</span>
+
+        <form method="post" action="http://localhost:7070/users/form"> <!-- The form tag creates an HTML form that natively supports submitting data to some URL-->
+            <label for="username">Username: </label>  <input type="text" name="username"><br>
+            <label for="password">Password: </label> <input type="password" name="password"><br>
+
+            <p>
+                <label for="firstName">First Name: </label> <input type="text" name="firstName"><br>
+                <label for="lastName">Last Name: </label><input type="text" name="lastName"><br>
+                <label for="birthMonth">Birth Month: </label><input type="text" name="birthMonth"><br>
+            </p>
+
+            <input type="submit">
+        </form>
+    </body>
+</html>
